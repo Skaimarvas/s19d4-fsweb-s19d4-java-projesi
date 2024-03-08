@@ -18,6 +18,18 @@ public class EmployeeServiceImpl implements EmployeeService{
         this.employeeRepository = employeeRepository;
     }
 
+
+
+    @Override
+    public Optional<Employee> findByEmail(String email){
+        return employeeRepository.findByEmail(email);
+    }
+
+    @Override
+    public List<Employee> findBySalary(Integer salary) {
+        return employeeRepository.findBySalary(salary);
+    }
+
     @Override
     public List<Employee> findAll() {
         return employeeRepository.findAll();
