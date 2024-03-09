@@ -10,7 +10,7 @@ public interface EmployeeService {
     List<Employee> findAll();
 
     List<Employee> listByOrder();
-    Optional<Employee> findByEmail(String email);
+    Employee findByEmail(String email);
 
      List<Employee> findBySalary(Integer salary);
     Employee findById(long id);

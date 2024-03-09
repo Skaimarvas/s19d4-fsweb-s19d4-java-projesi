@@ -29,11 +29,11 @@ public class EmployeeRepositoryTest {
     @DisplayName("findByEmail method run succesfully")
     @Test
     void findByEmail(){
-        Optional<Employee> employee = employeeRepository.findByEmail("rc@test.com");
-        assertTrue(employee.isPresent());
+        Employee employee = employeeRepository.findByEmail("rc@test.com");
+
         assertNotNull(employee);
-        assertEquals(employee.get().getLastName(), "Cabbar");
-        assertEquals(employee.get().getFirstName(),"Rıfkı");
+        assertEquals(employee.getLastName(), "Cabbar");
+        assertEquals(employee.getFirstName(),"Rıfkı");
     }
 
     @DisplayName("findById method failure state")
