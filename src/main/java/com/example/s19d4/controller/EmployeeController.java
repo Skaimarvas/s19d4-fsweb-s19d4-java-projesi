@@ -3,10 +3,10 @@ package com.example.s19d4.controller;
 import com.example.s19d4.entity.Employee;
 import com.example.s19d4.service.EmployeeService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-import java.util.Optional;
 
 @RestController
 @RequestMapping("/employee")
@@ -27,6 +27,7 @@ public class EmployeeController {
 
 
     @PostMapping
+    @ResponseStatus(HttpStatus.CREATED)
     public Employee save(@RequestBody Employee employee){
         return employeeService.save(employee);
     }
