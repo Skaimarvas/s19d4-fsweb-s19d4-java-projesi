@@ -8,6 +8,8 @@ import java.util.Optional;
 public interface EmployeeService {
 
     List<Employee> findAll();
+
+    List<Employee> listByOrder();
     Optional<Employee> findByEmail(String email);
 
      List<Employee> findBySalary(Integer salary);

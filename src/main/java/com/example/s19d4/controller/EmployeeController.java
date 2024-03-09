@@ -36,6 +36,10 @@ public class EmployeeController {
         return employeeService.findById(id);
     }
 
+    @GetMapping("/byorder")
+    public List<Employee> lastNameByOrder(){
+        return employeeService.listByOrder();
+    }
     @GetMapping("/email/{email}")
     public Optional<Employee> findByEmail(@PathVariable String email){
         return employeeService.findByEmail(email);

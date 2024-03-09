@@ -16,4 +16,7 @@ public interface EmployeeRepository extends JpaRepository<Employee,Long> {
 
     @Query("SELECT e FROM Employee e WHERE e.salary > :salary")
     List<Employee> findBySalary(Integer salary);
+
+    @Query("SELECT e FROM Employee e ORDER BY e.lastName ASC")
+    List<Employee> orderByLastName();
 }

@@ -45,6 +45,11 @@ public class EmployeeServiceImpl implements EmployeeService{
     }
 
     @Override
+    public List<Employee> listByOrder() {
+        return employeeRepository.orderByLastName();
+    }
+
+    @Override
     public Employee save(Employee employee) {
         return employeeRepository.save(employee);
     }
